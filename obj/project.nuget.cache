@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "hxGloixZ7eW5FGz/F4Dbs9Tx+HfphirHtF05M4C4r8NUXBzJl9CMpKIAmOJ1pn7Ndk29XwvHetwOpqJx+wSQFw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\SelfEducation\\ShutdownTimer\\ShutdownTimer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.toolkit.uwp.notifications\\7.0.0\\microsoft.toolkit.uwp.notifications.7.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.19041.1\\microsoft.windows.sdk.contracts.10.0.19041.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "ShutdownTimer зависит от Microsoft.Toolkit.Uwp.Notifications (>= 6.1.2), но Microsoft.Toolkit.Uwp.Notifications 6.1.2 не найден. Использовано наилучшее приближенное соответствие Microsoft.Toolkit.Uwp.Notifications 7.0.0.",
+      "libraryId": "Microsoft.Toolkit.Uwp.Notifications",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.7.2",
+        ".NETFramework,Version=v4.7.2/win",
+        ".NETFramework,Version=v4.7.2/win-arm64",
+        ".NETFramework,Version=v4.7.2/win-x64",
+        ".NETFramework,Version=v4.7.2/win-x86"
+      ]
+    }
+  ]
+}

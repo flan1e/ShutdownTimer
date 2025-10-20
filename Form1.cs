@@ -58,19 +58,27 @@ namespace ShutdownTimer
             cts = new CancellationTokenSource();
             btnStart.Enabled = false;
             btnCancel.Enabled = true;
+            lblTimer.Visible = true; 
 
             int totalSeconds = totalMinutes * 60;
 
+            ShowToast("The timer is set!", $"The computer will shut down in {totalMinutes} minutes. Please do not close the app.");
+
+   
             if (totalSeconds > 60)
             {
-                _ = Task.Delay((totalSeconds - 60) * 1000, cts.Token)
-                    .ContinueWith(t =>
+                _ = Task.Run(async () =>
+                {
+                    try
                     {
-                        if (!t.IsCanceled && !cts.Token.IsCancellationRequested)
+                        await Task.Delay((totalSeconds - 60) * 1000, cts.Token);
+                        if (!cts.Token.IsCancellationRequested)
                         {
-                            ShowToast("Shutdown is coming soon!", "The computer will be turned off in 1 minute.");
+                            ShowWarningToastWithCancel();
                         }
-                    }, TaskScheduler.Default);
+                    }
+                    catch (TaskCanceledException) {  }
+                }, cts.Token);
             }
             else
             {
@@ -79,19 +87,23 @@ namespace ShutdownTimer
 
             try
             {
-                ShowToast("The timer is set!", "The computer will shut down in " + txtMinutes.Text + " minutes. Please do not close the app.");
-                await Task.Delay(totalSeconds * 1000, cts.Token);
-
-                if (!cts.Token.IsCancellationRequested)
+                while (totalSeconds > 0)
                 {
-                    Process.Start("shutdown", "/s /t 0");
-                    Application.Exit();
-                }
-            }
-            catch (TaskCanceledException)
-            {
+                    cts.Token.ThrowIfCancellationRequested();
 
+                    int min = totalSeconds / 60;
+                    int sec = totalSeconds % 60;
+                    lblTimer.Text = $"Timer: {min:D2}:{sec:D2}";
+
+                    await Task.Delay(1000, cts.Token);
+                    totalSeconds--;
+                }
+
+                Process.Start("shutdown", "/s /t 0");
+                Application.Exit();
             }
+            catch (TaskCanceledException) { }
+            catch (OperationCanceledException) { }
         }
         private void ShowWarningToastWithCancel()
         {
@@ -117,6 +129,8 @@ namespace ShutdownTimer
         {
             cts?.Cancel();
             Process.Start("shutdown", "/a");
+            lblTimer.Text = "";
+            
             btnStart.Enabled = true;
             btnCancel.Enabled = false;
             ShowToast("Shutdown canceled", "Timer is stopped.");

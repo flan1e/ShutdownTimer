@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\bin\Release\ShutdownTimer.exe.config
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\bin\Release\ShutdownTimer.exe
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\bin\Release\ShutdownTimer.pdb
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\bin\Release\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\bin\Release\Microsoft.Toolkit.Uwp.Notifications.pdb
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\bin\Release\System.ValueTuple.dll
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.exe.config
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.Form1.resources
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.Properties.Resources.resources
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.csproj.GenerateResource.cache
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.csproj.CopyComplete
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.exe
+C:\Users\user\Desktop\SelfEducation\ShutdownTimer\obj\Release\ShutdownTimer.pdb
